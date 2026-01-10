@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "registry_type": "agent_registry",
+    "compatible_protocols": ["a2a", "mcp"],
+    "description": "Minimal InfoGuide agent registry listing available agents, their input/output data streams, and core capabilities."
+  },
+  "global_protocols": ["a2a", "mcp"],
+  "agents": [
+    {
+      "id": "rag-agent",
+      "name": "RAGRetriever",
+      "description": "Retrieves contextual knowledge from manuals and documentation sources.",
+      "capabilities": ["retrieval", "context extraction"],
+      "input_data_streams": {
+        "mandatory": ["text_query"],
+        "optional": ["metadata_filters"]
+      },
+      "output_data_streams": {
+        "mandatory": ["retrieved_chunks"],
+        "optional": ["source_references"]
+      }
+    },
+    {
+      "id": "vision-agent",
+      "name": "VisionInspector",
+      "description": "Analyzes visual data to extract features and detect potential defects.",
+      "capabilities": ["vision feature extraction", "defect detection"],
+      "input_data_streams": {
+        "mandatory": ["image"],
+        "optional": ["inspection_metadata"]
+      },
+      "output_data_streams": {
+        "mandatory": ["vision_features"],
+        "optional": ["defect_labels"]
+      }
+    },
+    {
+      "id": "timeseries-agent",
+      "name": "TimeSeriesAnalyzer",
+      "description": "Processes time-series signals to derive latent features and detect anomalies.",
+      "capabilities": ["feature extraction", "anomaly detection"],
+      "input_data_streams": {
+        "mandatory": ["time_series_data"],
+        "optional": ["sensor_metadata"]
+      },
+      "output_data_streams": {
+        "mandatory": ["ts_features"],
+        "optional": ["anomaly_scores"]
+      }
+    },
+    {
+      "id": "anomaly-prediction-agent",
+      "name": "AnomalyPredictor",
+      "description": "Detects and classifies anomalies in real time from multimodal manufacturing sensor data.",
+      "capabilities": ["multimodal anomaly detection", "anomaly classification", "real-time inference"],
+      "input_data_streams": {
+        "mandatory": ["sensor_data"],
+        "optional": ["historical_data"]
+      },
+      "output_data_streams": {
+        "mandatory": ["anomaly_report"],
+        "optional": ["future_anomaly_forecast"]
+      }
+    },
+    {
+      "id": "manuals-guide-agent",
+      "name": "ManualsGuide",
+      "description": "Retrieves relevant mitigation and troubleshooting steps from manufacturing manuals.",
+      "capabilities": ["retrieval", "mitigation guidance"],
+      "input_data_streams": {
+        "mandatory": ["anomaly_report"],
+        "optional": []
+      },
+      "output_data_streams": {
+        "mandatory": ["mitigation_steps"],
+        "optional": []
+      }
+    },
+    {
+      "id": "conversational-chatbot-agent",
+      "name": "ConversationalChatbot",
+      "description": "Combines anomaly prediction and manual-guided mitigation within an interactive conversational interface.",
+      "capabilities": ["dialog orchestration", "agent integration"],
+      "input_data_streams": {
+        "mandatory": ["user_query", "anomaly_report", "mitigation_steps"],
+        "optional": []
+      },
+      "output_data_streams": {
+        "mandatory": ["final_answer"],
+        "optional": []
+      }
+    },
+    {
+      "id": "fusion-agent",
+      "name": "FusionModel",
+      "description": "Integrates outputs from multiple modalities to generate fused representations.",
+      "capabilities": ["data fusion", "context integration"],
+      "input_data_streams": {
+        "mandatory": ["ts_features", "vision_features", "retrieved_chunks"],
+        "optional": ["knowledge_constraints"]
+      },
+      "output_data_streams": {
+        "mandatory": ["fused_representation"],
+        "optional": ["fusion_explanations"]
+      }
+    },
+    {
+      "id": "predictx-agent",
+      "name": "PredictX",
+      "description": "Performs analytical predictions and KPI calculations based on fused data.",
+      "capabilities": ["analytics", "scenario prediction"],
+      "input_data_streams": {
+        "mandatory": ["fused_representation"],
+        "optional": ["historical_kpi_data"]
+      },
+      "output_data_streams": {
+        "mandatory": ["kpi_metrics"],
+        "optional": ["what_if_scenarios"]
+      }
+    },
+    {
+      "id": "foresight-agent",
+      "name": "ForeSight",
+      "description": "Detects trends and forecasts potential future outcomes from observed data.",
+      "capabilities": ["trend detection", "forecasting"],
+      "input_data_streams": {
+        "mandatory": ["fused_representation"],
+        "optional": ["time_series_data"]
+      },
+      "output_data_streams": {
+        "mandatory": ["trend_predictions"],
+        "optional": ["early_warnings"]
+      }
+    },
+    {
+      "id": "qa-agent",
+      "name": "InfoGuideQA",
+      "description": "Main orchestrator handling user queries and managing downstream calls.",
+      "capabilities": ["query routing", "dialog orchestration"],
+      "input_data_streams": {
+        "mandatory": ["user_query"],
+        "optional": ["context_hints"]
+      },
+      "output_data_streams": {
+        "mandatory": ["query_plan", "final_answer"],
+        "optional": ["intermediate_context"]
+      }
+    },
+    {
+      "id": "response-agent",
+      "name": "ResponseSynthesizer",
+      "description": "Synthesizes final, human-readable responses from analyzed and fused data.",
+      "capabilities": ["result aggregation", "answer generation"],
+      "input_data_streams": {
+        "mandatory": ["fused_representation", "kpi_metrics", "trend_predictions"],
+        "optional": ["contextual_explanations"]
+      },
+      "output_data_streams": {
+        "mandatory": ["final_answer"],
+        "optional": ["citations", "summary_notes"]
+      }
+    }
+  ]
+}

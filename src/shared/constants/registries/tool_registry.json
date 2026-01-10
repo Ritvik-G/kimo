@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "registry_type": "tool_registry",
+    "description": "Demo tool registry listing model/tools used inside agent workflows."
+  },
+  "tools": [
+    {
+      "name": "CNN Model",
+      "tagline": "Image features",
+      "gradient": "from-sky-50 via-white to-indigo-100",
+      "ring": "ring-sky-200",
+      "accent": "bg-sky-600",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["image_data"],
+      "outputNames": ["vision_features"],
+      "inputRequired": [true],
+      "outputRequired": [true]
+    },
+    {
+      "name": "LSTM Model",
+      "tagline": "Time-series inference",
+      "gradient": "from-emerald-50 via-white to-teal-100",
+      "ring": "ring-emerald-200",
+      "accent": "bg-emerald-600",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["timeseries_data"],
+      "outputNames": ["temporal_features"],
+      "inputRequired": [true],
+      "outputRequired": [true]
+    },
+    {
+      "name": "PDF Parser",
+      "tagline": "Extract manual text",
+      "gradient": "from-amber-50 via-white to-orange-100",
+      "ring": "ring-amber-200",
+      "accent": "bg-amber-600",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["manual_pdf"],
+      "outputNames": ["manual_text"],
+      "inputRequired": [true],
+      "outputRequired": [true]
+    },
+    {
+      "name": "Embedding Model",
+      "tagline": "Text → vectors",
+      "gradient": "from-violet-50 via-white to-indigo-100",
+      "ring": "ring-violet-200",
+      "accent": "bg-indigo-600",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["manual_text"],
+      "outputNames": ["text_embeddings"],
+      "inputRequired": [true],
+      "outputRequired": [true]
+    },
+    {
+      "name": "Vector DB",
+      "tagline": "Semantic retrieval",
+      "gradient": "from-gray-50 via-white to-slate-100",
+      "ring": "ring-slate-200",
+      "accent": "bg-slate-700",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["text_embeddings"],
+      "outputNames": ["retrieved_chunks"],
+      "inputRequired": [false],
+      "outputRequired": [false]
+    },
+    {
+      "name": "LLM",
+      "tagline": "For chat focused tasks",
+      "gradient": "from-fuchsia-50 via-white to-purple-100",
+      "ring": "ring-fuchsia-200",
+      "accent": "bg-fuchsia-600",
+      "inputCount": 1,
+      "outputCount": 1,
+      "inputNames": ["prompt"],
+      "outputNames": ["response"],
+      "inputRequired": [false],
+      "outputRequired": [false]
+    }
+  ]
+}

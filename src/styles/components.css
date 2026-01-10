@@ -1,0 +1,203 @@
+@reference "tailwindcss";
+
+@layer components {
+.btn-pill {
+  @apply rounded-full px-4 py-2 text-sm font-semibold shadow-sm transition;
+}
+
+.btn-pill-light {
+  @apply border border-slate-200 bg-white/90 text-slate-700 hover:bg-white;
+}
+
+.btn-pill-emerald {
+  @apply border border-emerald-200 bg-emerald-600 text-white hover:bg-emerald-500;
+}
+
+.btn-pill-amber {
+  @apply border border-amber-200 bg-amber-600 text-white hover:bg-amber-500;
+}
+
+.btn-pill-sky {
+  @apply border border-sky-200 bg-sky-600 text-white hover:bg-sky-500;
+}
+
+.btn-sm {
+  @apply rounded-md px-3 py-2 text-xs font-semibold shadow-sm transition;
+}
+
+.btn-sm-solid-emerald {
+  @apply bg-emerald-600 text-white hover:bg-emerald-500;
+}
+
+.btn-sm-solid-amber {
+  @apply bg-amber-600 text-white hover:bg-amber-500;
+}
+
+.btn-sm-outline {
+  @apply border border-slate-200 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+.btn-sm-rose {
+  @apply border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100;
+}
+
+.panel {
+  @apply rounded-2xl border border-slate-200 p-5 shadow-sm;
+}
+
+.card {
+  @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+.empty-state {
+  @apply rounded-xl border border-dashed border-slate-200 bg-white/70;
+}
+
+.draggable-card {
+  @apply cursor-grab rounded-xl border border-slate-200 bg-gradient-to-br from-white via-white to-slate-50 p-4 shadow-sm active:cursor-grabbing;
+}
+
+.badge {
+  @apply rounded-full bg-slate-100 px-3 py-1;
+}
+
+.badge-tight {
+  @apply rounded-full bg-slate-100 px-2 py-1;
+}
+
+.pill-tag {
+  @apply rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide;
+}
+
+.pill-tag-emerald {
+  @apply bg-emerald-100 text-emerald-700;
+}
+
+.pill-tag-amber {
+  @apply bg-amber-100 text-amber-700;
+}
+
+.pill-tag-sky {
+  @apply bg-sky-100 text-sky-700;
+}
+
+.chip {
+  @apply inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-slate-700 shadow-sm ring-1 ring-slate-200;
+}
+
+.chip-close {
+  @apply rounded-full bg-slate-200 px-2 text-[10px] text-slate-600 opacity-70 transition group-hover:opacity-100;
+}
+
+.toolbar-btn {
+  @apply rounded-full px-4 py-2 text-sm font-semibold shadow-sm;
+}
+
+.toolbar-btn-dark {
+  @apply border border-slate-700 bg-slate-800/90 text-slate-100 hover:bg-slate-700;
+}
+
+.toolbar-btn-light {
+  @apply border border-slate-200 bg-white/90 text-slate-800 hover:bg-slate-100;
+}
+
+.toolbar-menu {
+  @apply absolute right-0 mt-2 w-48 rounded-xl border p-2 shadow-lg;
+}
+
+.toolbar-menu-dark {
+  @apply border-slate-700 bg-slate-900/95;
+}
+
+.toolbar-menu-light {
+  @apply border-slate-200 bg-white;
+}
+
+.toolbar-menu-item {
+  @apply flex w-full items-center rounded-lg px-3 py-2 text-sm font-semibold;
+}
+
+.toolbar-menu-item-dark {
+  @apply text-slate-100 hover:bg-slate-800;
+}
+
+.toolbar-menu-item-light {
+  @apply text-slate-700 hover:bg-slate-100;
+}
+
+.modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm;
+}
+
+.modal-card {
+  @apply relative overflow-visible rounded-xl bg-white shadow-2xl border border-slate-200;
+}
+
+.modal-close-wrap {
+  @apply absolute -right-3 -top-3 z-[9999];
+}
+
+.modal-close-btn {
+  @apply h-8 w-8 rounded-full bg-slate-900 text-white text-sm font-semibold shadow-lg flex items-center justify-center;
+}
+
+.panel-sm {
+  @apply rounded-lg border border-slate-200 p-3;
+}
+
+.label-xs {
+  @apply text-xs font-semibold uppercase text-slate-500;
+}
+
+.canvas-agent-card {
+  @apply relative rounded-lg border border-slate-200 bg-white/90 shadow-md backdrop-blur-sm transition-all duration-150 px-3 pt-2 pb-3 cursor-grab active:cursor-grabbing select-none;
+}
+
+.canvas-agent-card-active {
+  @apply ring-2 ring-emerald-300;
+}
+
+.canvas-tool-shell {
+  @apply relative overflow-visible cursor-grab active:cursor-grabbing select-none;
+}
+
+.canvas-tool-shell-active {
+  @apply ring-2 ring-offset-2 ring-offset-white shadow-lg;
+}
+
+.canvas-tool-bg {
+  @apply absolute inset-0 rounded-lg bg-gradient-to-br ring-1 ring-inset shadow-sm transition-all duration-150 pointer-events-none;
+}
+
+.canvas-tool-content {
+  @apply relative h-full w-full flex flex-col items-center justify-center px-4 text-center gap-2;
+}
+
+.canvas-remove-btn {
+  @apply absolute -right-3 -top-3 flex items-center justify-center rounded-full bg-slate-900 text-white text-xs shadow-md transition-all duration-150;
+}
+
+.canvas-remove-btn-lg {
+  @apply h-7 w-7;
+}
+
+.canvas-remove-btn-sm {
+  @apply h-6 w-6;
+}
+
+.canvas-remove-btn-visible {
+  @apply scale-100 opacity-100;
+}
+
+.canvas-remove-btn-hidden {
+  @apply scale-75 opacity-0 pointer-events-none;
+}
+
+.plan-card {
+  @apply relative w-[260px] min-w-[260px] max-w-[260px] rounded-lg border border-slate-200 bg-white/90 px-3 pt-2 pb-3 shadow-md backdrop-blur-sm transition-all duration-150 cursor-grab active:cursor-grabbing select-none;
+}
+
+.plan-card-active {
+  @apply ring-2 ring-sky-300;
+}
+}
